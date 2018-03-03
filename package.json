@@ -1,6 +1,6 @@
 {
     "name": "html-webpack-critical-plugin",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Webpack 4 plugin for critical extracts & inlines critical-path (above-the-fold) CSS from HTML",
     "main": "index.js",
     "files": [
