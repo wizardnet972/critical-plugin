@@ -28,11 +28,11 @@ const HtmlWebpackCriticalPlugin = require('html-webpack-critical-plugin');
 ...
 plugins: [
 
-    // new HtmlWebPackPlugin(),
+    new HtmlWebPackPlugin(),
 
-    // new ExtractTextPlugin({
-    //     filename: "[name].[contenthash].css"
-    // }),
+    new ExtractTextPlugin({
+        filename: "[name].[contenthash].css"
+    }),
 
     // if you use HtmlWebpackInlineSVGPlugin you should pass runPreEmit.  
     // new HtmlWebpackInlineSVGPlugin({
