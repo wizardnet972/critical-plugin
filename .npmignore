@@ -1,0 +1,16 @@
+node_modules/*
+
+.vscode
+.idea
+.project
+.settings
+.DS_Store
+
+!bundles/*.js
+!*.metadata.json
+!*.d.ts
+
+Thumbs.db
+Desktop.ini
+
+.github
