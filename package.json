@@ -7,10 +7,9 @@
         "index.js"
     ],
     "scripts": {
-        "prepublish": "npm run test",
         "test": "jasmine",
         "debug": "node-debug jasmine",
-        "build": "node spec/build.js"
+        "build": "node test/build.js"
     },
     "repository": {
         "type": "git",
