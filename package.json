@@ -1,0 +1,40 @@
+{
+    "name": "html-webpack-critical-plugin",
+    "version": "0.0.0",
+    "description": "Webpack 4 plugin for critical extracts & inlines critical-path (above-the-fold) CSS from HTML",
+    "main": "index.js",
+    "files": [
+        "index.js"
+    ],
+    "scripts": {
+        "prepublish": "npm run test",
+        "test": "jasmine",
+        "debug": "node-debug jasmine",
+        "build": "node spec/build.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wizardnet972/html-webpack-critical-plugin.git"
+    },
+    "keywords": [
+        "webpack",
+        "plugin",
+        "critical",
+        "html-webpack-critical-plugin",
+        "inline"
+    ],
+    "author": "Shlomi Levi (https://github.com/wizardnet972)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/wizardnet972/html-webpack-critical-plugin/issues"
+    },
+    "homepage": "https://github.com/twizardnet972/html-webpack-critical-plugin",
+    "devDependencies": {
+        "webpack": "^4.0.1"
+    },
+    "dependencies": {
+        "chalk": "^2.3.2",
+        "critical": "^1.1.0",
+        "webpack-cli": "^2.0.10"
+    }
+}
