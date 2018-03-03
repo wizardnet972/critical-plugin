@@ -35,6 +35,7 @@
     "dependencies": {
         "chalk": "^2.3.2",
         "critical": "^1.1.0",
+        "fs": "0.0.1-security",
         "webpack-cli": "^2.0.10"
     }
 }

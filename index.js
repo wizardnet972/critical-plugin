@@ -3,7 +3,6 @@
 const chalk = require('chalk');
 const critical = require('critical');
 const path = require('path');
-const _ = require('lodash');
 const fs = require('fs');
 
 class HtmlWebpackCriticalPlugin {
