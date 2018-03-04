@@ -5,7 +5,7 @@ Critical extension for the HTML Webpack 4 Plugin
 
 Extract your styles from js bundle and inlined the critical styles in your html.
 
-[Why? Read more at @Meduim](https://medium.com/@wizardnet972/make-your-page-rendering-faster)
+[Why? Read more at @Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
 
 Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?style=social&label=%20wizardnet972)](https://twitter.com/wizardnet972) to be notified about new releases.
 
