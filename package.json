@@ -29,12 +29,9 @@
     },
     "homepage": "https://github.com/twizardnet972/html-webpack-critical-plugin",
     "devDependencies": {
-        "webpack": "^4.0.1"
-    },
-    "dependencies": {
+        "webpack": "^4.0.1",
         "chalk": "^2.3.2",
         "critical": "^1.1.0",
-        "fs": "0.0.1-security",
         "webpack-cli": "^2.0.10"
     }
 }
