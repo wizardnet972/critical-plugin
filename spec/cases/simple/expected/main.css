@@ -1,0 +1,7 @@
+html body {
+  background: blue; }
+  html body .this-style-is-will-load-after-critical-path {
+    height: 200px;
+    width: 200px;
+    background: red;
+    margin: 20px; }

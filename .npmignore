@@ -1,5 +1,6 @@
-node_modules/*
-
+/node_modules
+/dist
+/spec/output/*
 .vscode
 .idea
 .project
@@ -9,6 +10,8 @@ node_modules/*
 !bundles/*.js
 !*.metadata.json
 !*.d.ts
+*.log
+npm-debug.log*
 
 Thumbs.db
 Desktop.ini

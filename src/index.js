@@ -36,6 +36,7 @@ class HtmlWebpackCriticalPlugin {
 
                 this.files.push({
                     filename,
+                    base: this.outputPath,
                     html: HtmlWebpackPlugin.html.source(),
                 });
             });
@@ -43,15 +44,17 @@ class HtmlWebpackCriticalPlugin {
 
         compiler.plugin('after-emit', (compilation, callback) => {
 
-            console.log(chalk.blue('Processing critical files, this may take a few seconds...'));
+            console.log(chalk.yellow('Parsing critical files...'));
 
             Promise.all(
-                this.files.map(f => this.critical({
-                    html: f.html,
-                    ...this.options.critical
-                }).then((html) => {
-                    return this.updateOutputFile(html, f.filename);
-                }))
+                this.files.map(f =>
+                    this.critical(Object.assign({
+                        html: f.html,
+                        base: f.base
+                    }, this.options.critical))
+                    .then((html) => {
+                        return this.updateOutputFile(html, f.filename);
+                    }))
             ).then(() => {
                 callback();
 
