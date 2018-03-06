@@ -1,8 +1,6 @@
 [![npm][npm]][npm-url]
 [![deps][deps]][deps-url]
 [![test][test]][test-url]
-[![coverage][cover]][cover-url]
-[![chat][chat]][chat-url]
 
 <div align="center">
   <img width="300" height="200" src="https://i.imgur.com/lAzmBD2.png">
@@ -86,4 +84,5 @@ plugins: [
 [deps-url]: https://david-dm.org/wizardnet972/html-webpack-critical-plugin
 
 [test]: http://img.shields.io/travis/wizardnet972/html-webpack-critical-plugin.svg
+[test-url]: 
 https://travis-ci.org/wizardnet972/html-webpack-critical-plugin
