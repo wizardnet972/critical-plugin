@@ -3,7 +3,7 @@
 [![test][test]][test-url]
 
 <div align="center">
-  <img width="300" height="200" src="https://i.imgur.com/lAzmBD2.png">
+  <img width="400" height="200" src="https://i.imgur.com/lAzmBD2.png">
   <a href="https://webpack.js.org/">
     <img width="200" height="200" vspace="" hspace="25" src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon-square-big.svg">
   </a>
@@ -14,7 +14,7 @@
 > Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
 
 
-# [Why you need it in production? Read at @Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
+## [Why you need it in production? Read at @Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
 
 Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?style=social&label=%20wizardnet972)](https://twitter.com/wizardnet972) to be notified about new releases.
 
