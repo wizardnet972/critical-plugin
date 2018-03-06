@@ -14,7 +14,7 @@
 > Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
 
 
-## [Why you need it in production? Read at @Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
+## [Why you should use it in production? Read at Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
 
 Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?style=social&label=%20wizardnet972)](https://twitter.com/wizardnet972) to be notified about new releases.
 
