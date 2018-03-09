@@ -48,6 +48,6 @@ describe("A main suite for running all the cases", function () {
 
                 done();
             });
-        });
+        }, 20000);
     }
 });

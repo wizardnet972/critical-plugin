@@ -84,9 +84,9 @@ console.log('this is a simple test');
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+// extracted by mini-css-extract-plugin
 
 /***/ })
 /******/ ]);

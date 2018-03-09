@@ -8,70 +8,46 @@ const fs = require('fs');
 class HtmlWebpackCriticalPlugin {
 
     constructor(options) {
-        this.options = options;
-
-        this.userConfig = ''
-        this.outputPath = ''
-
-        this.files = []
+        this.options = options || {};
+        this.criticalOptions = this.options.critical || {};
     }
 
     apply(compiler) {
 
-        compiler.hooks.compilation.tap('HtmlWebpackPluginHooks', compilation => {
+        compiler.hooks.afterEmit.tapAsync('HtmlWebpackCriticalPlugin', (chunk, callback) => {
 
-            compilation.hooks.htmlWebpackPluginAfterEmit.tap('PreloadPlugin', HtmlWebpackPlugin => {
+            const assets = Object.keys(chunk.assets)
+                .filter(key => key && key.toLowerCase().endsWith('.html'))
+                .map(key => chunk.assets[key])
+                .map(asset => ({ asset, options: Object.assign({
+                    base: path.dirname(asset.existsAt),
+                    src: path.basename(asset.existsAt),
+                    inline: true,
+                }, this.criticalOptions)}))
+                .map(({asset, options}) => critical.generate(options).then(html => {
+                    return this.writeFile(html, asset.existsAt);
+                }));
 
-                const filename = HtmlWebpackPlugin.outputName || '';
-                if (!filename) {
-                    console.log(chalk.yellow('Asset ignored. no provide filename in HtmlWebpackPlugin'));
-                    return;
-                }
+            if (assets && assets.length) {
+                console.log(chalk.yellow('resolving critical path...'))
+            }
 
-                this.outputPath = compilation.outputOptions && compilation.outputOptions.path || '';
-                if (!this.outputPath) {
-                    console.log(chalk.yellow('Asset ignored. no provide outputPath in HtmlWebpackPlugin'));
-                    return;
-                }
-
-                this.files.push({
-                    filename,
-                    base: this.outputPath,
-                    html: HtmlWebpackPlugin.html.source(),
+            Promise.all(assets)
+                .then(() => {
+                    console.log(chalk.green('critical path is set.'));
+                    callback();
                 });
-            });
-        });
-
-        compiler.plugin('after-emit', (compilation, callback) => {
-
-            console.log(chalk.yellow('Parsing critical files...'));
-
-            Promise.all(
-                this.files.map(f =>
-                    this.critical(Object.assign({
-                        html: f.html,
-                        base: f.base
-                    }, this.options.critical))
-                    .then((html) => {
-                        return this.updateOutputFile(html, f.filename);
-                    }))
-            ).then(() => {
-                callback();
-
-            }).catch(error => {
-                callback(error);
-            });
         });
     }
 
-    updateOutputFile(html, filename) {
-
-        if (!this.outputPath || !filename) return Promise.reject(new Error('outputPath & filename must be set to update output file'))
-
-        else if (!html) return Promise.resolve()
-
+    writeFile(html, filename) {
         return new Promise((resolve, reject) => {
-            fs.writeFile(path.resolve(this.outputPath, filename), html, (err) => {
+        
+            if (!filename) return reject(new Error('outputPath & filename must be set to update output file'));
+             
+            if (!html) return resolve()
+
+            fs.writeFile(filename, html, (err) => {
                 if (err) {
                     reject(err);
                     return;
@@ -80,11 +56,6 @@ class HtmlWebpackCriticalPlugin {
             })
         })
     }
-
-    critical(options) {
-        return critical.generate(options);
-    }
-
 }
 
 module.exports = HtmlWebpackCriticalPlugin;
