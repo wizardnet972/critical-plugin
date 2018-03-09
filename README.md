@@ -7,7 +7,7 @@
   <a href="https://webpack.js.org/">
     <img width="200" height="200" vspace="" hspace="25" src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon-square-big.svg">
   </a>
-  <h1>Critical Wrapper for Webpack</h1>
+  <h1>Critical Path Plugin for webpack</h1>
   <p>Extract your styles from js bundle and inlined the critical styles in your html</p>
 </div>
 
@@ -23,6 +23,10 @@ Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?sty
 ```
 $ npm install html-webpack-critical-plugin --save-dev
 
+# if you want you can use dependencies:
+
+$ npm install mini-css-extract-plugin --save-dev
+$ npm install html-webpack-plugin --save-dev
 ```
 
 ## Usage
@@ -34,31 +38,36 @@ const HtmlWebpackCriticalPlugin = require('html-webpack-critical-plugin');
 ...
 plugins: [
 
-    new HtmlWebPackPlugin(),
+    new HtmlWebpackCriticalPlugin(),
+ 
+    // // or with options from https://github.com/addyosmani/critical#options
+    // new HtmlWebpackCriticalPlugin({
+    //   critical: {
+    //     inline: true
+    //   }
+    // })
 
-    new ExtractTextPlugin({
-        filename: "[name].[contenthash].css"
+    new HtmlWebPackPlugin(),
+    
+    new MiniCssExtractPlugin({
+        // Options similar to the same options in webpackOptions.output
+        // both options are optional
+        filename: "[name].css",
+        chunkFilename: "[id].css"
     }),
+
+    // only in the next version for webpack4
+    // new ExtractTextPlugin({
+    //     filename: "[name].[contenthash].css"
+    // }),
 
     // if you use HtmlWebpackInlineSVGPlugin you should pass runPreEmit.  
     // new HtmlWebpackInlineSVGPlugin({
     //   runPreEmit: true
     // }),
-
-    new HtmlWebpackCriticalPlugin({
-     critical: {
-        inline: true,
-        base: 'dist/',
-        // all options in https://github.com/addyosmani/critical#options
-     }
-    }),
 ]
 ...
 ```
-
-
-# License
- [MIT](/LICENSE)
 
 # Maintainers
 
@@ -76,6 +85,8 @@ plugins: [
   <tbody>
 </table>
 
+# License
+ [MIT](/LICENSE)
  
 [npm]: https://img.shields.io/npm/v/html-webpack-critical-plugin.svg
 [npm-url]: https://npmjs.com/package/html-webpack-critical-plugin
@@ -86,3 +97,4 @@ plugins: [
 [test]: http://img.shields.io/travis/wizardnet972/html-webpack-critical-plugin.svg
 [test-url]: 
 https://travis-ci.org/wizardnet972/html-webpack-critical-plugin
+
