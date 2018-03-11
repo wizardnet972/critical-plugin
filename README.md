@@ -1,6 +1,9 @@
 [![npm][npm]][npm-url]
 [![deps][deps]][deps-url]
 [![test][test]][test-url]
+<a href="https://npmcharts.com/compare/html-webpack-critical-plugin?minimal=true">
+		<img src="https://img.shields.io/npm/dm/html-webpack-critical-plugin.svg">
+</a>
 
 <div align="center">
   <img width="400" height="200" src="https://i.imgur.com/lAzmBD2.png">
@@ -14,7 +17,7 @@
 > Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
 
 
-## [Why you should use it in production? Read at Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
+## [Why should you use this in production? Read at Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
 
 Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?style=social&label=%20wizardnet972)](https://twitter.com/wizardnet972) to be notified about new releases.
 
