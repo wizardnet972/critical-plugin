@@ -6,9 +6,8 @@
 </a>
 
 <div align="center">
-  <img width="400" height="200" src="https://i.imgur.com/lAzmBD2.png">
   <a href="https://webpack.js.org/">
-    <img width="200" height="200" vspace="" hspace="25" src="https://cdn.rawgit.com/webpack/media/e7485eb2/logo/icon-square-big.svg">
+    <img src="https://cdn-images-1.medium.com/max/2000/1*Exk4-5GTxlnvcdESMYxypA.png">
   </a>
   <h1>Critical Path Plugin for webpack</h1>
   <p>Extract your styles from js bundle and inlined the critical styles in your html</p>
