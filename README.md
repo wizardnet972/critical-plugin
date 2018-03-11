@@ -9,7 +9,7 @@
   <a href="https://webpack.js.org/">
     <img src="https://cdn-images-1.medium.com/max/2000/1*Exk4-5GTxlnvcdESMYxypA.png">
   </a>
-  <h1>Critical Path Plugin for webpack</h1>
+  <h1>html webpack critical plugin</h1>
   <p>Extract your styles from js bundle and inlined the critical styles in your html</p>
 </div>
 
