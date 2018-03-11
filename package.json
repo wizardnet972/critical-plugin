@@ -7,6 +7,7 @@
     "main": "dist/index.js",
     "private": false,
     "scripts": {
+
         "test": "jasmine",
         "start": "npm run build -- -w",
         "clean": "rm -rf dist",
@@ -14,7 +15,11 @@
         "prepublish": "npm run build",
         "release": "standard-version",
         "security": "nsp check",
-        "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'"
+        "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js'",
+        "travis:test": "npm run test -- --runInBand",
+        "travis:lint": "npm run lint && npm run security",
+        "lint": "eslint --cache src test",
+        "lint-staged": "lint-staged"
     },
     "files": [
         "dist"
@@ -54,7 +59,8 @@
         "sass-loader": "^6.0.7",
         "style-loader": "^0.20.2",
         "webpack": "^4.1.1",
-        "webpack-cli": "^2.0.10"
+        "webpack-cli": "^2.0.10",
+        "lint-staged": "^6.1.0"        
     },
     "dependencies": {}
 }
