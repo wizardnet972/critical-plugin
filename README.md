@@ -40,9 +40,9 @@ module.exports = {
 }
 ```
 
-# Options
+# Configuration
 
-You see all the options from crtical library https://github.com/addyosmani/critical#options
+You must pass a hash of configuration options to the plugin to cause the addition of attributes. List of them you can find in [this link](https://github.com/addyosmani/critical#options)
 
 > Plese note that, do not use the following options `base`, `html`, `src`, `dest`, `css`, `folder`, because the critical-plugin will do set them for you base on your project.
 
