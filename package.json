@@ -1,13 +1,12 @@
 {
-    "name": "html-webpack-critical-plugin",
-    "version": "1.0.3",
-    "description": "Webpack 4 plugin for critical extracts & inlines critical-path (above-the-fold) CSS from HTML",
+    "name": "critical-plugin",
+    "version": "1.0.4",
+    "description": "critical plugin for webpack extracts & inlines critical-path (above-the-fold) CSS from HTML",
     "author": "Shlomi Levi (https://github.com/wizardnet972)",
     "license": "MIT",
     "main": "dist/index.js",
     "private": false,
     "scripts": {
-
         "test": "jasmine",
         "start": "npm run build -- -w",
         "clean": "rm -rf dist",
@@ -32,35 +31,36 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/wizardnet972/html-webpack-critical-plugin.git"
+        "url": "https://github.com/wizardnet972/critical-plugin.git"
     },
     "keywords": [
+        "critical",
+        "critical-plugin",
         "webpack",
         "plugin",
-        "critical",
-        "html-webpack-critical-plugin",
-        "inline"
+        "inline",
+        "css"
     ],
     "bugs": {
-        "url": "https://github.com/wizardnet972/html-webpack-critical-plugin/issues"
+        "url": "https://github.com/wizardnet972/critical-plugin/issues"
     },
-    "homepage": "https://github.com/twizardnet972/html-webpack-critical-plugin",
+    "homepage": "https://github.com/wizardnet972/critical-plugin",
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "chalk": "^2.3.2",
-        "critical": "^1.1.0",
+        "critical": "^1.2.2",
         "cross-env": "^5.1.3",
         "css-loader": "^0.28.10",
         "extract-text-webpack-plugin": "^4.0.0-beta.0",
-        "html-webpack-plugin": "^3.0.6",
+        "html-webpack-plugin": "^3.1.0",
         "jasmine": "^3.1.0",
-        "mini-css-extract-plugin": "^0.2.0",
+        "mini-css-extract-plugin": "^0.4.0",
         "node-sass": "^4.7.2",
         "sass-loader": "^6.0.7",
         "style-loader": "^0.20.2",
-        "webpack": "^4.1.1",
-        "webpack-cli": "^2.0.10",
-        "lint-staged": "^6.1.0"        
+        "webpack": "^4.4.1",
+        "webpack-cli": "^2.0.13",
+        "lint-staged": "^6.1.0"
     },
     "dependencies": {}
 }

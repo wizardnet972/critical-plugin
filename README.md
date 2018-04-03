@@ -1,75 +1,53 @@
-[![npm][npm]][npm-url]
+<div align="center">
+  <a href="https://webpack.js.org/">
+    <img src="https://goo.gl/f6QJFa">
+  </a>
+  <h1><code>critical-plugin</code> for webpack</h1>
+  [![npm][npm]][npm-url]
 [![deps][deps]][deps-url]
 [![test][test]][test-url]
 <a href="https://npmcharts.com/compare/html-webpack-critical-plugin?minimal=true">
 		<img src="https://img.shields.io/npm/dm/html-webpack-critical-plugin.svg">
 </a>
 
-<div align="center">
-  <a href="https://webpack.js.org/">
-    <img src="https://cdn-images-1.medium.com/max/2000/1*Exk4-5GTxlnvcdESMYxypA.png">
-  </a>
-  <h1>html webpack critical plugin</h1>
   <p>Extract your styles from js bundle and inlined the critical styles in your html</p>
 </div>
 
-> Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
-
-
-## [Why should you use this in production? Read at Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
-
-Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?style=social&label=%20wizardnet972)](https://twitter.com/wizardnet972) to be notified about new releases.
-
-## Install
+# Install
 
 ```
-$ npm install html-webpack-critical-plugin --save-dev
-
-# if you want you can use dependencies:
-
-$ npm install mini-css-extract-plugin --save-dev
-$ npm install html-webpack-plugin --save-dev
+$ npm install critical-plugin [--save-dev]
 ```
 
-## Usage
+# Setup
 
-**webpack.config.js**
+First, instantiate the plugin with options in your webpack.config:
 
 ```js
-const HtmlWebpackCriticalPlugin = require('html-webpack-critical-plugin');
-...
-plugins: [
+// webpack.config.js example
 
-    new HtmlWebpackCriticalPlugin(),
- 
-    // // or with options from https://github.com/addyosmani/critical#options
-    // new HtmlWebpackCriticalPlugin({
-    //   critical: {
-    //     inline: true
-    //   }
-    // })
+var CriticalPlugin = require('critical-plugin');
 
-    new HtmlWebPackPlugin(),
+module.exports = {
+  // ...
+
+  plugins: [
+    // ... other plugins
     
-    new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // both options are optional
-        filename: "[name].css",
-        chunkFilename: "[id].css"
-    }),
-
-    // only in the next version for webpack4
-    // new ExtractTextPlugin({
-    //     filename: "[name].[contenthash].css"
-    // }),
-
-    // if you use HtmlWebpackInlineSVGPlugin you should pass runPreEmit.  
-    // new HtmlWebpackInlineSVGPlugin({
-    //   runPreEmit: true
-    // }),
-]
-...
+    new CritialPlugin()
+  ]
+  // ...
+}
 ```
+
+# Articles
+
+*  [Why should you use this in production? Read at Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
+
+# Like critical-plugin?
+Support it by giving feedback, contributing, becoming a backer/sponsor or just by 🌟 starring the project!
+
+Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?style=social&label=%20wizardnet972)](https://twitter.com/wizardnet972) to be notified about new releases.
 
 # Maintainers
 
@@ -90,13 +68,13 @@ plugins: [
 # License
  [MIT](/LICENSE)
  
-[npm]: https://img.shields.io/npm/v/html-webpack-critical-plugin.svg
-[npm-url]: https://npmjs.com/package/html-webpack-critical-plugin
+[npm]: https://img.shields.io/npm/v/critical-plugin.svg
+[npm-url]: https://npmjs.com/package/critical-plugin
 
-[deps]: https://david-dm.org/wizardnet972/html-webpack-critical-plugin.svg
-[deps-url]: https://david-dm.org/wizardnet972/html-webpack-critical-plugin
+[deps]: https://david-dm.org/wizardnet972/critical-plugin.svg
+[deps-url]: https://david-dm.org/wizardnet972/critical-plugin
 
-[test]: http://img.shields.io/travis/wizardnet972/html-webpack-critical-plugin.svg
+[test]: http://img.shields.io/travis/wizardnet972/critical-plugin.svg
 [test-url]: 
-https://travis-ci.org/wizardnet972/html-webpack-critical-plugin
+https://travis-ci.org/wizardnet972/critical-plugin
 
