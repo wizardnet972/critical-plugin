@@ -40,6 +40,60 @@ module.exports = {
 }
 ```
 
+# Options
+
+You see all the options from crtical library https://github.com/addyosmani/critical#options
+
+> Plese note that, do not use the following options `base`, `html`, `src`, `dest`, `css`, `folder`, because the critical-plugin will do set them for you base on your project.
+
+```js
+// webpack.config.js example
+
+var CriticalPlugin = require('critical-plugin');
+
+var criticalOptions = {
+    // Inline the generated critical-path CSS
+    // - true generates HTML
+    // - false generates CSS
+    inline: true,
+
+    // Viewport width
+    width: 1300,
+
+    // Viewport height
+    height: 900,
+
+    // Minify critical-path CSS when inlining
+    minify: true,
+
+    // Extract inlined styles from referenced stylesheets
+    extract: true,
+
+    // Complete Timeout for Operation
+    timeout: 30000,
+
+    // Prefix for asset directory
+    pathPrefix: '/MySubfolderDocrot',
+
+    // ignore CSS rules
+    ignore: ['font-face',/some-regexp/],
+
+    // overwrite default options
+    ignoreOptions: {}
+};
+
+module.exports = {
+  // ...
+
+  plugins: [
+    // ... other plugins
+    
+    new CritialPlugin({ critical: criticalOptions })
+  ]
+  // ...
+}
+```
+
 # Articles
 
 *  [Why should you use this in production? Read at Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
