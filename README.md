@@ -3,15 +3,15 @@
     <img src="https://goo.gl/f6QJFa">
   </a>
   <h1><code>critical-plugin</code> for webpack</h1>
-  [![npm][npm]][npm-url]
+  <p>Extract your styles from js bundle and inlined the critical styles in your html</p>
+</div>
+
+[![npm][npm]][npm-url]
 [![deps][deps]][deps-url]
 [![test][test]][test-url]
 <a href="https://npmcharts.com/compare/html-webpack-critical-plugin?minimal=true">
 		<img src="https://img.shields.io/npm/dm/html-webpack-critical-plugin.svg">
 </a>
-
-  <p>Extract your styles from js bundle and inlined the critical styles in your html</p>
-</div>
 
 # Install
 
@@ -99,7 +99,7 @@ module.exports = {
 *  [Why should you use this in production? Read at Meduim](https://medium.com/@wizardnet972/https-medium-com-wizardnet972-make-your-page-rendering-faster-e14a95747c7a)
 
 # Like critical-plugin?
-Support it by giving feedback, contributing, becoming a backer/sponsor or just by 🌟 starring the project!
+Support it by giving feedback, contributing or just by 🌟 starring the project!
 
 Follow me [![twitter](https://img.shields.io/twitter/follow/wizardnet972.svg?style=social&label=%20wizardnet972)](https://twitter.com/wizardnet972) to be notified about new releases.
 
